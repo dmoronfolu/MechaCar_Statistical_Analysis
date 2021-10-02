@@ -10,8 +10,7 @@ Linear Regression to Predict MPG
 Using the MechaCar data file, we created linear regression, using the lm() function with the six variables provided in the data file. Then we determined the p-value and r-squared value for the linear regression model, using the summary() function. We used the following summary() formula to generate the desired results: 
 
 summary(lm(mpg ~ vehicle_length + vehicle_weight + spoiler_angle + ground_clearance + AWD, data=MechaCarData))    
-
-Resources/MechaCar Data Summary.png
+https://github.com/dmoronfolu/MechaCar_Statistical_Analysis/blob/bfc1328a69f6fd4cf1eeb1bbb3bf70fcd137b2ff/Resources/MechaCar%20Data%20Summary.png
 
 Which variables/coefficients provided a non-random amount of variance to the mpg values in the dataset?
 According to the screenshot above, the Vehicle Length and Ground Clearance variables are most likely to provide a non-random amount of variance to the mpg values in the dataset. 
@@ -30,7 +29,7 @@ To determine the Summary Statistics on Suspension Coils, we ran analysis on the 
 total_summary <- suspension_coil_data %>% summarize(Mean=mean(PSI),Median=median(PSI),Variance=var(PSI),SD=sd(PSI), .groups = 'keep')
 
 After running the above the function, we got the following result:
-Resources/Total_Summary.png
+https://github.com/dmoronfolu/MechaCar_Statistical_Analysis/blob/5f62c39f5512ae484feb689071de954e9f7c06cb/Resources/Total_Summary.png
  
  
 According to the our result, the mean is 1498.78, the Median is 1500, the Variance is 62.29456 and Standard Deviation or SD is 7.892627
@@ -40,7 +39,7 @@ We used the following function to determine the lot summary:
 lot_summary <- suspension_coil_data %>% group_by(Manufacturing_Lot) %>% summarize(Mean=mean(PSI),Median=median(PSI),Variance=var(PSI),SD=sd(PSI), .groups = 'keep')
 
 We got the following result after running the lot summary function: 
-Resources/Lot_Summary.png 
+https://github.com/dmoronfolu/MechaCar_Statistical_Analysis/blob/5f62c39f5512ae484feb689071de954e9f7c06cb/Resources/Lot_Summary.png
 
 The design specifications for the MechaCar suspension coils dictate that the variance of the suspension coils must not exceed 100 pounds per square inch. Does the current manufacturing data meet this design specification for all manufacturing lots in total and each lot individually? Why or why not?
 
@@ -54,7 +53,7 @@ We used the following function to create T-test for all the manufacturing lots:
 
 				t.test(suspension_coil_data$PSI,mu=1500)
 
-Resources/Suspension_Coil T-test.png
+https://github.com/dmoronfolu/MechaCar_Statistical_Analysis/blob/5f62c39f5512ae484feb689071de954e9f7c06cb/Resources/Suspension_Coil%20T-test.png
  
 The p-value of all the manufacturing lots is 0.06 and has a mean of 1498.78 compared the presumed population mean of 1500
 
@@ -62,14 +61,13 @@ Then we created T-Tests for all three manufacturing lots using the formula above
  
 The mean of Lot 1 sample is 1500, which is the same as the PSI mean. The p-value for Lot 1 is 1, therefore, we cannot reject the null hypothesis and must accept because there is no statistical difference between the observed sample mean and the presumed population mean
 
- Resources/Lot 1 T-Test.png
+https://github.com/dmoronfolu/MechaCar_Statistical_Analysis/blob/5f62c39f5512ae484feb689071de954e9f7c06cb/Resources/Lot%201%20T-Test.png
 
 The result for Lot 2 is similar to that of Lot 1 with a sample mean of 1500.2 and a p-value of 0.61. The null hypothesis cannot be rejected as the two samples are statistically similar. 
-
- Resources/Lot 2 T-Test.png
+https://github.com/dmoronfolu/MechaCar_Statistical_Analysis/blob/5f62c39f5512ae484feb689071de954e9f7c06cb/Resources/Lot%202%20T-Test.png
 
 The p-value for Lot 3 is 0.04 which is lower than the significance level of 0.05. Therefore, we can conclude that there is sufficient evidence to reject our null hypothesis.
-Resources/Lot 3 T-test.png
+https://github.com/dmoronfolu/MechaCar_Statistical_Analysis/blob/5f62c39f5512ae484feb689071de954e9f7c06cb/Resources/Lot%203%20T-test.png
 
 Study Design: MechaCar vs Competition
 
